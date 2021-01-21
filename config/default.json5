@@ -1,0 +1,9 @@
+{
+  api: {
+    port: 8080,
+    ip: "localhost",
+    apiPrefix: "/queries",
+    outputFile: "./previous_results.json",
+    searchBy: "Results" // Results or RelatedTopics
+  },
+}

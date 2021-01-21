@@ -1,0 +1,77 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": "2017",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "babel",
+    "import"
+  ],
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "rules": {
+    "strict": [2, "never"],
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": { "var": 2, "let": 2, "const": 3 },
+        "ArrayExpression": 2,
+        "ObjectExpression": 1,
+        "FunctionExpression": { "parameters": "first"},
+        "ImportDeclaration": 1
+      }
+    ],
+    "require-jsdoc": 0,
+    "no-invalid-this": 0,
+    "max-len": [
+      1,
+      240,
+      {
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreTrailingComments": true,
+        "ignoreStrings": true
+      }
+    ],
+    "brace-style": ["warn", "stroustrup"],
+    "object-curly-spacing": ["error", "always"],
+    "babel/new-cap": 1,
+//    "no-await-in-loop": 1,
+    "no-console": 0,
+    "no-useless-escape": 0,
+    "no-control-regex": 0,
+    "no-useless-constructor": "error",
+    "newline-before-return": "error",
+    "comma-dangle": ["error", "never"],
+    "array-bracket-spacing": ["error", "never"],
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "space-infix-ops": "error",
+    "camelcase": "warn",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let", "var", "if", "while", "for", "function", "do", "switch", "block", "block-like"], "next": "*"},
+      { "blankLine": "any",    "prev": "directive", "next": "directive" },
+      { "blankLine": "any",    "prev": ["const", "let", "var", "class"], "next": ["const", "let", "var"]}
+    ],
+    "import/order": ["error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "sibling",
+          "index"
+        ]
+      }
+    ]
+  }
+}
